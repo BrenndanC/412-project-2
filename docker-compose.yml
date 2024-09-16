@@ -1,0 +1,42 @@
+services:
+  website1:
+    image: my-nginx-container:latest
+    environment:
+      TITLE: "Website 1"
+    ports:
+      - "8080:80"
+
+  website2:
+    image: my-nginx-container:latest
+    environment:
+      TITLE: "Website 2"
+    ports:
+      - "8081:80"
+
+  website3:
+    image: my-nginx-container:latest
+    environment:
+      TITLE: "Website 3"
+    ports:
+      - "8082:80"
+
+  website4:
+    image: my-nginx-container:latest
+    environment:
+      TITLE: "Website 4"
+    ports:
+      - "8083:80"
+
+  website5:
+    image: my-nginx-container:latest
+    environment:
+      TITLE: "Website 5"
+    ports:
+      - "8084:80"
+
+  websites:
+    image: my-nginx-container:latest
+    ports:
+      - "80"
+    deploy:
+      replicas: 5
